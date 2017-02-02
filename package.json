@@ -1,0 +1,19 @@
+{
+  "name": "hogey",
+  "version": "0.0.0",
+  "description": "Inspired by Mortal Kombat and Hogey the Rougey, this web app allows you to maintain a leaderboard and challenge people.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9508422/hogey.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "jest"
+  ],
+  "author": "Rhys Gevaux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/9508422/hogey/issues"
+  }
+}
