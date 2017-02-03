@@ -1,12 +1,26 @@
 import React from 'react'
 import { hashHistory, IndexRoute, Route, Router } from 'react-router'
-import Layout from 'Layout'
-import { Home } from 'pages'
+import LayoutPage from 'LayoutPage'
+import { ChallengePage, DashboardPage, HomePage, LeaderboardPage, LogoutPage } from 'pages'
 
-export default (
-  <Router history={hashHistory}>
-    <Route path='/' component={Layout}>
-      <IndexRoute component={Home} header='Home' />
-    </Route>
-  </Router>
-)
+export default function getRoutes (checkAuth) {
+  return (
+    <Router history={hashHistory}>
+      <Route path='/' component={LayoutPage}>
+        <IndexRoute component={HomePage} header='Home' onEnter={checkAuth} />
+        <Route
+          path='challenge/:sport'
+          component={ChallengePage}
+          header='Challenge'
+          onEnter={checkAuth} />
+        <Route path='dashboard' component={DashboardPage} header='Dashboard' onEnter={checkAuth} />
+        <Route
+          path='leaderboard/:sport'
+          component={LeaderboardPage}
+          header='Leaderboard'
+          onEnter={checkAuth} />
+        <Route path='logout' component={LogoutPage} header='Logout' />
+      </Route>
+    </Router>
+  )
+}

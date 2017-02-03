@@ -1,7 +1,4 @@
 {
-  "plugins": [
-    "react-hot-loader/babel"
-  ],
   "presets": [
     ["latest", {
       "es2015": {
@@ -13,5 +10,17 @@
     "stage-1",
     "stage-2",
     "stage-3"
-  ]
+  ],
+  "env": {
+    "start": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }

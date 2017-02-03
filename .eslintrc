@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -29,6 +30,8 @@
     "comma-dangle": [2, "always-multiline"],
     "immutable/no-mutation": 0,
     "immutable/no-let": 2,
-    "immutable/no-this": 0
+    "immutable/no-this": 0,
+    "max-len": [2, 100],
+    "react/jsx-no-literals": 2
   }
 }

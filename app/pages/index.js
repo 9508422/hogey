@@ -1,1 +1,5 @@
-export Home from './Home'
+export ChallengePage from './ChallengePage'
+export DashboardPage from './DashboardPage'
+export HomePage from './HomePage'
+export LeaderboardPage from './LeaderboardPage'
+export LogoutPage from './LogoutPage'
