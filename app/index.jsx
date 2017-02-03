@@ -1,16 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { Main } from 'pages'
+import 'sanitize.css/sanitize.css'
+import routes from 'config/routes'
 
-function doRender (Component) {
-  render(<AppContainer><Component /></AppContainer>, document.getElementById('root'))
+function doRender () {
+  render(<AppContainer>{routes}</AppContainer>, document.getElementById('root'))
 }
 
-doRender(Main)
+doRender()
 
 if (module.hot) {
   module.hot.accept('pages', () => {
-    doRender(Main)
+    doRender()
   })
 }
