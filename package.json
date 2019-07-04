@@ -23,7 +23,9 @@
     "test": "jest; exit 0",
     "test:watch": "jest --watch; exit 0",
     "lint": "eslint app/.; exit 0",
-    "fix": "eslint --fix app/.; exit 0"
+    "fix": "eslint --fix app/.; exit 0",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "moduleDirectories": [
@@ -43,7 +45,8 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "sanitize.css": "^4.1.0"
+    "sanitize.css": "^4.1.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -74,5 +77,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.2.1"
-  }
+  },
+  "snyk": true
 }
